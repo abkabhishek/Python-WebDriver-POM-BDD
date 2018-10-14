@@ -1,10 +1,11 @@
 
 import sys
+import pytest
 from sys import stdout as console
 sys.path.append('.')
 
-# import unittest
-import pytest
+
+
 
 from POM.base_pom import *
 
@@ -12,8 +13,9 @@ from POM.base_pom import *
 def multiply(x,y):
     return x*y
 
-# run by :  python -m pytest tests\test_sample.py -v
-#pytest -s tests\test_sample.py -v
+# run by :  python -m pytest UnitTests/test__sample.py -v
+# or
+# run by :  pytest -s UnitTests/test__sample.py -v
 
 
 # config = {"browser": "chrome", "baseURL": "https://www.startpage.com/"}
