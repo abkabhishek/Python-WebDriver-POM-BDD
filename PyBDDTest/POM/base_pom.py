@@ -1,5 +1,5 @@
 
-import time
+
 from sys import stdout as console
 
 

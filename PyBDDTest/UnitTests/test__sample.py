@@ -1,4 +1,4 @@
-
+import time
 import sys
 import pytest
 from sys import stdout as console
@@ -8,6 +8,7 @@ sys.path.append('.')
 
 
 from POM.base_pom import *
+from POM.home_page_pom import *
 
 
 def multiply(x,y):
@@ -24,9 +25,9 @@ def multiply(x,y):
 class Page:
 
     def __init__(self,url):
-        config = {"browser": "firefox", "baseURL": url,"headless":False}
+        config = {"browser": "chrome", "baseURL": url,"headless":False}
         Page.Base=Base(**config)
-        # Page.Home=Homepage(Page.Base)
+        Page.Home=Homepage(Page.Base)
 
 
 @pytest.fixture(scope="module",autouse=True,params=["https://www.google.com/"])
@@ -40,7 +41,7 @@ def P(request):
 
 @pytest.fixture(scope="class",autouse=True)
 def tcitem(request):
-    print('\nAbk\n')
+    print('\nStart\n')
     def endit():
         print ("\nEnding it \n")
     request.addfinalizer(endit)
@@ -66,15 +67,25 @@ def teardown_function(function):
 
 def test_numbers_3_4():
     Page.Base.do_open_page()
+    time.sleep(3)
     console.write (Page.Base.get_page_title())
     print ('test_numbers_3_4  <============================ actual test code')
 
     assert multiply(3,4) == 12
 
-# def test_strings_a_3():
-#     print ('test_strings_a_3  <============================ actual test code')
-#     assert Page.Home.Validate_FirstFocus()==True
-#     assert multiply('a',3) == 'aaa'
+def test_strings_a_3():
+    print ('test_strings_a_3  <============================ actual test code')
+    Page.Home.do_open_homepage()
+    time.sleep(3)
+    assert Page.Home.check_first_focus()==True
+
+def test_strings_a_4():
+    print ('test_strings_a_3  <============================ actual test code')
+    Page.Home.do_open_homepage()
+    time.sleep(3)
+    # Page.Base.do_perform_search("Paris")
+    assert Page.Base.do_perform_search("Paris")==True
+
 
 
 class TestUM:
