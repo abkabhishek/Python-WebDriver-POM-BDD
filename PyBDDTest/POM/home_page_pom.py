@@ -1,14 +1,11 @@
 
-import traceback
 
-from selenium.common.exceptions import NoSuchElementException, WebDriverException
 
 from sys import stdout as console
-# import org.openqa.selenium.Keys
-import logging
 
-from pom.LOCATOR import *
-import utils.common as COM
+
+
+import Services.common as COM
 
 
 

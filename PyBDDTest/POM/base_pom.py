@@ -1,12 +1,11 @@
-import time
 
-from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.keys import Keys
+import time
 from sys import stdout as console
+
+
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+
 
 from Services.browsers import *
 import Services.common as COM
@@ -17,8 +16,17 @@ import Services.common as COM
 
 class Base:
 
+
+    # __________________________________________________________________________
+    ############  >>>>>>>>>>        ELEMENTS       <<<<<<<<<<<<< ###############
+    #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
     SearchBox = (By.NAME, "q")
     SearchButton = (By.CSS_SELECTOR, "button.search-form__button")
+
+    ############  >>>>>>>>>>    --- X --- X ----   <<<<<<<<<<<<< ###############
+    # --------------------------------------------------------------------------
+
 
     def __init__(self,**kwargs):
         self.w = BROWSER(kwargs['browser'],kwargs['headless'])
