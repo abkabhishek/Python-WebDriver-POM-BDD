@@ -14,9 +14,9 @@ from POM.home_page_pom import *
 def multiply(x,y):
     return x*y
 
-# run by :  python -m pytest UnitTests/test__sample.py -v
+# run by :  python -m pytest UnitTests/test__homepage.py -v
 # or
-# run by :  pytest -s UnitTests/test__sample.py -v
+# run by :  pytest -s UnitTests/test__homepage.py -v
 
 
 # config = {"browser": "chrome", "baseURL": "https://www.startpage.com/"}

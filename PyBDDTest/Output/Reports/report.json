@@ -1,0 +1,82 @@
+[
+{
+  "elements": [
+    {
+      "keyword": "Scenario",
+      "location": "Features/Homepage.feature:5",
+      "name": "Verify the performing web search functionality",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "Features/Homepage.feature:6",
+          "match": {
+            "arguments": [],
+            "location": "steps/home_page_step.py:3"
+          },
+          "name": "User loads www.google.com in browser",
+          "result": {
+            "duration": 1.6939799785614014,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "Features/Homepage.feature:7",
+          "match": {
+            "arguments": [],
+            "location": "steps/home_page_step.py:8"
+          },
+          "name": "User input search term in search box and submit it",
+          "result": {
+            "duration": 0.00014591217041015625,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "Features/Homepage.feature:8",
+          "match": {
+            "arguments": [],
+            "location": "steps/home_page_step.py:12"
+          },
+          "name": "User navigates to Web result page of searched term",
+          "result": {
+            "duration": 0.0001373291015625,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "And",
+          "location": "Features/Homepage.feature:9",
+          "match": {
+            "arguments": [],
+            "location": "steps/home_page_step.py:16"
+          },
+          "name": "page title contains search term",
+          "result": {
+            "duration": 0.0001361370086669922,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [
+        "sanity",
+        "wip"
+      ],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "Features/Homepage.feature:2",
+  "name": "Validation of Basic Home page features",
+  "status": "passed",
+  "tags": [
+    "homepage"
+  ]
+}
+]

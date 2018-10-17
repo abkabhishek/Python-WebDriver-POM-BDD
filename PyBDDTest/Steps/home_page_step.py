@@ -2,6 +2,7 @@ from behave import *
 
 @given('User loads www.google.com in browser')
 def step_impl(context):
+    context.Home.do_open_homepage()
     assert True is True
 
 @when('User input search term in search box and submit it')

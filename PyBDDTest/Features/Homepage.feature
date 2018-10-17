@@ -1,5 +1,7 @@
+@homepage
 Feature: Validation of Basic Home page features
 
+  @sanity @wip
   Scenario: Verify the performing web search functionality
      Given User loads www.google.com in browser
       When User input search term in search box and submit it
