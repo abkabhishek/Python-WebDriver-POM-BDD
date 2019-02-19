@@ -1,0 +1,4 @@
+cd pytest==3.8.2
+selenium==3.14.1
+behave==1.2.6
+SQLAlchemy==1.2.12

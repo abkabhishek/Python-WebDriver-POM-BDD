@@ -34,23 +34,6 @@ def FindElems(driver,Locator,Element):
         return elems
 
 
-def get_result_interface_language(lang):
-    return {
-        "en": "english",
-        "gb": "english_uk",
-        "de": "deutsch",
-        "da": "dansk",
-        "es": "espanol",
-        "fi": "suomi",
-        "fr": "francais",
-        "it": "italiano",
-        "nl": "nederlands",
-        "pl": "polski",
-        "pt": "portugues",
-        "sv": "svenska",
-        "no": "norsk"
-        }.get(lang,False)
-
 
 
 

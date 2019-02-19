@@ -10,7 +10,7 @@ sys.path.append(".")
 class DBStore:
 
 
-    def __init__(self,DBFile='DB/SBDB.db'):
+    def __init__(self,DBFile='DB/SampleDB.db'):
         self.db=DBFile
         logging.debug('Connecting to DB : %s',self.db)
         self.conn=sqlite3.connect(self.db)

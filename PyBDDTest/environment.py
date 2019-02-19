@@ -30,9 +30,6 @@ def propertyReader(PropFileName):
     return config
 
 
-# # config={"browser":"chrome","baseURL":"https://quest1:quest123@crucible.startpage.com/en/","headless":False}
-# config={"browser":"chrome","baseURL":"https://guestn:n!Q7c2LU@peak.startpage.com/en/","headless":False}
-
 class COLORS:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -176,7 +173,7 @@ def after_all(context):
 ##   STEP                                       #These run before and after every step.
 
 def before_step(context, step):
-    pass 
+    pass
 
 def after_step(context, step):
     pass
@@ -187,7 +184,7 @@ def after_step(context, step):
 ##   SCENARIO                                       #These run before and after each scenario is run.
 
 def before_scenario(context, scenario):
-    pass 
+    pass
 
 def after_scenario(context, scenario):
     pass
@@ -197,7 +194,7 @@ def after_scenario(context, scenario):
 ##   FEATURE                                       #These run before and after each feature file is exercised.
 
 def before_feature(context, feature):
-    pass 
+    pass
 
 def after_feature(context, feature):
     pass
@@ -208,7 +205,7 @@ def after_feature(context, feature):
 ##   ALL                                       #These run before and after the whole shooting match.
 
 def before_all(context):
-    pass 
+    pass
 
 def after_all(context):
     pass
@@ -222,7 +219,7 @@ def after_all(context):
 #These run before and after a section tagged with the given name. They are invoked for each tag encountered in the order they’re found in the feature file. See controlling things with tags.
 
 def before_tag(context, tag):
-    pass 
+    pass
 
 def after_tag(context, tag):
     pass

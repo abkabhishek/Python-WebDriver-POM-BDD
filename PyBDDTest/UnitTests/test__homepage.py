@@ -19,7 +19,6 @@ def multiply(x,y):
 # run by :  pytest -s UnitTests/test__homepage.py -v
 
 
-# config = {"browser": "chrome", "baseURL": "https://www.startpage.com/"}
 
 
 class Page:
