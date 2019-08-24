@@ -8,7 +8,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
 
-import Services.common as COM
+import core.common as COM
+from core.com import *
 
 
 
@@ -22,9 +23,9 @@ class Homepage:
     ############  >>>>>>>>>>        ELEMENTS       <<<<<<<<<<<<< ###############
     #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    SearchBox = (By.NAME, "q")
+    # SearchBox = Com2.Element((By.NAME, "q"))
 
-    Page_Identifier = (By.ID, "hplogo")
+    # Page_Identifier = (By.ID, "hplogo")
 
     ############  >>>>>>>>>>    --- X --- X ----   <<<<<<<<<<<<< ###############
     # --------------------------------------------------------------------------
@@ -37,6 +38,11 @@ class Homepage:
     def __init__(self,Base):
         self.driver=Base.driver
         self.baseURL=Base.baseURl
+        CM = COM2(self.driver)
+
+        self.SearchBox = CM.Element((By.NAME, "q"))
+
+        self.Page_Identifier = (By.ID, "hplogo")
 
 
 
@@ -71,6 +77,8 @@ class Homepage:
         elem2 = COM.FindElem(self.driver, *Homepage.SearchBox)
         return self.check_active_element(elem2)
 
+    def perform_search(self,search_term):
+        self.SearchBox(True)[0].send_keys(search_term)
 
 
 
