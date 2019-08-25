@@ -1,5 +1,6 @@
 from sys import stdout as console
-class COM2:
+
+class Com:
     
     def __init__(self,driver):
         self.driver=driver
